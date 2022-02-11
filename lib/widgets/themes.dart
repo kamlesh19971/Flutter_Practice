@@ -31,8 +31,9 @@ class MyTheme {
           color: Colors.black,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.white),
-          foregroundColor: Colors.black
-          // textTheme: Theme.of(context).textTheme
+          foregroundColor: Colors.white,
+          // titleTextStyle: TextStyle(color: Colors.white)
+          // textTheme: Theme.of(context).textTheme.copyWith(headline6: context.textTheme.headline6.copyWith(color: Colors.white))
           ));
 
   // Colors
