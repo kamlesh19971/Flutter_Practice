@@ -15,9 +15,9 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creameColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -27,7 +27,7 @@ class HomeDetailPage extends StatelessWidget {
                 onPressed: () {},
                 style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(MyTheme.darkBluisColor),
+                        MaterialStateProperty.all(context.theme.buttonColor),
                     shape: MaterialStateProperty.all(StadiumBorder())),
                 child: "Add to cart".text.make()
             ).wh(120, 50)
@@ -48,11 +48,11 @@ class HomeDetailPage extends StatelessWidget {
                 edge: VxEdge.TOP,
                 arcType: VxArcType.CONVEY,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth ,
                   child: Column(
                     children: [
-                      catalog.name.text.xl4.color(MyTheme.darkBluisColor).bold.make(),
+                      catalog.name.text.xl4.color(context.accentColor).bold.make(),
                       catalog.desc.text.xl.make(),
                       10.heightBox,
                       "Ut et sea sea est stet dolores magna, sea ipsum amet ea rebum accusam eirmod. Diam takimata ipsum aliquyam sea gubergren. At invidunt tempor dolore lorem amet, amet consetetur voluptua."
