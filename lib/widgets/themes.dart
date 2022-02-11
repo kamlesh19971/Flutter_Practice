@@ -38,8 +38,8 @@ class MyTheme {
 
   // Colors
 
-  static Color creameColor = Color(0xfff5f5f5);
+  static Color creameColor = const Color(0xfff5f5f5);
   static Color darkCreameColor = Vx.gray900;
-  static Color darkBluisColor = Color(0xff403b58);
+  static Color darkBluisColor = const Color(0xff403b58);
   static Color lightBluisColor = Vx.indigo500;
 }

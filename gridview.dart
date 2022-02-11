@@ -20,13 +20,13 @@ class _HomePageState extends State<HomePage> {
   
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
     loadData();
   }
 
   loadData() async{
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
     final catalogJson = await rootBundle.loadString("assets/files/catalog.json");
     final decodedData =  json.decode(catalogJson);
     var productsData = decodedData["products"];
@@ -42,10 +42,10 @@ class _HomePageState extends State<HomePage> {
  
     return Scaffold( 
         appBar: AppBar(
-          title: Text("Catalog App"),
+          title: const Text("Catalog App"),
         ),
         body: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: CatalogModel.items.isNotEmpty ? 
           // ListView.builder(
           //   itemCount: CatalogModel.items.length, 
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                 child: GridTile(
                   header: Container(
-                    child: Text(item.name, style: TextStyle(color: Colors.white),),
+                    child: Text(item.name, style: const TextStyle(color: Colors.white),),
                     padding: const EdgeInsets.all(12),
                     decoration: const BoxDecoration(
                       color: Colors.deepPurple
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child: Image.network(item.image),
                   footer: Container(
-                    child: Text(item.price.toString(), style: TextStyle(color: Colors.white),),
+                    child: Text(item.price.toString(), style: const TextStyle(color: Colors.white),),
                     padding: const EdgeInsets.all(12),
                     decoration: const BoxDecoration(
                       color: Colors.black
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
             child: CircularProgressIndicator(),
           ),
         ),
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
       );
   }
 }

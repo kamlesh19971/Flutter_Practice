@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
             Navigator.pushNamed(context, MyRoutes.cartRoute);
           },
           backgroundColor: MyTheme.lightBluisColor,
-          child: Icon(
+          child: const Icon(
             CupertinoIcons.cart,
             color: Colors.white,
           ),
